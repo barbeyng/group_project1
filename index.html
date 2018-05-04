@@ -214,14 +214,7 @@
         <div class="col-md-8 mx-auto">
           <h2 class="section-heading">Enter a snack, a beverage, a dish.</h2>
           <p>We'll calculate the calories for you.</p>
-          <div class="badges">
-            <a class="badge-link" href="#">
-              <img src="img/google-play-badge.svg" alt="">
-            </a>
-            <a class="badge-link" href="#">
-              <img src="img/app-store-badge.svg" alt="">
-            </a>
-          </div>
+
         </div>
       </div>
     </div>
@@ -235,177 +228,141 @@
         <hr>
       </div>
 
-            <div class="yz-widget" 
+      <div class="yz-widget" data-calculator-type="calories_burned" data-language="en" data-unit-system="imperial" data-background-color="#EEEEEE"
+        data-text-color="#212121" data-primary-color="#03A9F4" data-alternate-background-color="#FFFFFF" data-alternate-text-color="#FFFFFF"
+        data-secondary-color="#FFC107">
 
-            
-            data-calculator-type="calories_burned" 
-            data-language="en" 
-            data-unit-system="imperial" 
-            data-background-color="#EEEEEE" 
-            data-text-color="#212121" 
-            data-primary-color="#03A9F4" 
-            data-alternate-background-color="#FFFFFF" 
-            data-alternate-text-color="#FFFFFF" 
-            data-secondary-color="#FFC107">
-        
-          
-            <span class="yz-copyright">Powered by 
-              <a href="https://www.yazio.com/en/calories-burned-calculator">YAZIO</a>
-            </span>
-          </div>
-            
-            </div>
-                  
-                      </div>
-                    </div>
-                  </section>
-                
-          <div class="device-container">
-            <div class="device-mockup iphone6_plus portrait white">
-              <div class="device">
-             
-                <div class="button">
-                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                </div>
 
-  <section class="cta">
-    <div class="cta-content">
-      <div class="container">
-        <h2>Stop waiting.
-          <br>Start building.</h2>
-        <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+        <span class="yz-copyright">Powered by
+          <a href="https://www.yazio.com/en/calories-burned-calculator">YAZIO</a>
+        </span>
       </div>
-    </div>
-    <div class="overlay"></div>
-  </section>
 
-  <section class="contact bg-primary" id="contact">
-    <div class="container">
-      <h2>Find a gym near you!</h2>
-      <ul class="list-inline list-social">
-        <li class="list-inline-item social-twitter">
-          <a href="#">
-            <i class="fa fa-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social-facebook">
-          <a href="#">
-            <i class="fa fa-facebook"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social-google-plus">
-          <a href="#">
-            <i class="fa fa-google-plus"></i>
-          </a>
-        </li>
-      </ul>
+    </div>
+
+    </div>
     </div>
   </section>
 
-  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-  <div id="map"></div>
-  <script>
-    function initAutocomplete() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -33.8688, lng: 151.2195 },
-        zoom: 13,
-        mapTypeId: 'roadmap'
-      });
+  <div class="device-container">
+    <div class="device-mockup iphone6_plus portrait white">
+      <div class="device">
 
-      // Create the search box and link it to the UI element.
-      var input = document.getElementById('pac-input');
-      var searchBox = new google.maps.places.SearchBox(input);
-      map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        <div class="button">
+          <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+        </div>
 
-      // Bias the SearchBox results towards current map's viewport.
-      map.addListener('bounds_changed', function () {
-        searchBox.setBounds(map.getBounds());
-      });
+        <section class="contact bg-primary" id="contact">
+          <div class="container">
+            <h2>Find a gym near you!</h2>
 
-      var markers = [];
-      // Listen for the event fired when the user selects a prediction and retrieve
-      // more details for that place.
-      searchBox.addListener('places_changed', function () {
-        var places = searchBox.getPlaces();
+          </div>
+        </section>
 
-        if (places.length == 0) {
-          return;
-        }
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map"></div>
+        <script>
+          function initAutocomplete() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: { lat: -33.8688, lng: 151.2195 },
+              zoom: 13,
+              mapTypeId: 'roadmap'
+            });
 
-        // Clear out the old markers.
-        markers.forEach(function (marker) {
-          marker.setMap(null);
-        });
-        markers = [];
+            // Create the search box and link it to the UI element.
+            var input = document.getElementById('pac-input');
+            var searchBox = new google.maps.places.SearchBox(input);
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-        // For each place, get the icon, name and location.
-        var bounds = new google.maps.LatLngBounds();
-        places.forEach(function (place) {
-          if (!place.geometry) {
-            console.log("Returned place contains no geometry");
-            return;
+            // Bias the SearchBox results towards current map's viewport.
+            map.addListener('bounds_changed', function () {
+              searchBox.setBounds(map.getBounds());
+            });
+
+            var markers = [];
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            searchBox.addListener('places_changed', function () {
+              var places = searchBox.getPlaces();
+
+              if (places.length == 0) {
+                return;
+              }
+
+              // Clear out the old markers.
+              markers.forEach(function (marker) {
+                marker.setMap(null);
+              });
+              markers = [];
+
+              // For each place, get the icon, name and location.
+              var bounds = new google.maps.LatLngBounds();
+              places.forEach(function (place) {
+                if (!place.geometry) {
+                  console.log("Returned place contains no geometry");
+                  return;
+                }
+                var icon = {
+                  url: place.icon,
+                  size: new google.maps.Size(71, 71),
+                  origin: new google.maps.Point(0, 0),
+                  anchor: new google.maps.Point(17, 34),
+                  scaledSize: new google.maps.Size(25, 25)
+                };
+
+                // Create a marker for each place.
+                markers.push(new google.maps.Marker({
+                  map: map,
+                  icon: icon,
+                  title: place.name,
+                  position: place.geometry.location
+                }));
+
+                if (place.geometry.viewport) {
+                  // Only geocodes have viewport.
+                  bounds.union(place.geometry.viewport);
+                } else {
+                  bounds.extend(place.geometry.location);
+                }
+              });
+              map.fitBounds(bounds);
+            });
           }
-          var icon = {
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(25, 25)
-          };
 
-          // Create a marker for each place.
-          markers.push(new google.maps.Marker({
-            map: map,
-            icon: icon,
-            title: place.name,
-            position: place.geometry.location
-          }));
-
-          if (place.geometry.viewport) {
-            // Only geocodes have viewport.
-            bounds.union(place.geometry.viewport);
-          } else {
-            bounds.extend(place.geometry.location);
-          }
-        });
-        map.fitBounds(bounds);
-      });
-    }
-
-  </script>
+        </script>
 
 
-  <footer>
-    <div class="container">
-      <p>&copy; Your Website 2018. All Rights Reserved.</p>
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <a href="#">Privacy</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#">Terms</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#">FAQ</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+        <footer>
+          <div class="container">
+            <p>&copy; Your Website 2018. All Rights Reserved.</p>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#">Privacy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="js/new-age.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/new-age.js"></script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-cJxcww9hYfMATtMCyEklhUrgjlUPVaE&libraries=places&callback=initAutocomplete"
-    async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-cJxcww9hYfMATtMCyEklhUrgjlUPVaE&libraries=places&callback=initAutocomplete"
+          async defer></script>
 
-  <script src="https://widget.yazio.com/calculator.js" async></script>
+        <script src="https://widget.yazio.com/calculator.js" async></script>
 
 </body>
 
