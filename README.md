@@ -10,7 +10,7 @@ About:
 Weapons of Mass Reduction is a web application that helps people live a healthier lifestyle. 
 With the help of the Calorie Count, you can put in the name of the dish you're eating and instantly get the number of calories.
 After you get your answer, you can use the Calorie Calculator to know how many calories you burn by doing your daily workout. 
-Don't know where the closest gym to you is located? No worries. You can search for gyms close to you by putting in your zipcode or city in the search box of the map that is proivded on the app. 
+Don't know where the closest gym to you is located? No worries. You can search for gyms close to you by putting in your zip code or city in the search box of the map that is provided on the app. 
 
 
 
