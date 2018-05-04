@@ -42,7 +42,7 @@
 })(jQuery); // End of use strict
 
 //Calorie Tracker
-$('#submit-button').click(searchFood);
+$('#submit-btn').click(searchFood);
 function searchFood(event) {
   event.preventDefault();
   var userInput = $('#foodInput').val().trim();
@@ -66,7 +66,7 @@ function searchFood(event) {
 //Google Maps API
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: -33.8688, lng: 151.2195 },
+    center: { lat: 44.983782, lng: -93.180521 },
     zoom: 13,
     mapTypeId: 'roadmap'
   });
