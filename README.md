@@ -16,7 +16,7 @@ Don't know where the closest gym to you is located? No worries. You can search f
 
 API's used:
 
-•	With the help of nutritionix API, we are able to pull the number of calories that are in the dish the user search for. 
+•	With the help of nutritionix API, we are able to pull the number of calories that are in the meal the user search for. 
 
 •	We used Google Map’s API to search for gyms close to the user’s location. 
 
