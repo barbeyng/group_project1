@@ -1,5 +1,8 @@
 Group Project 1. 
+
 Group Members: Amal H, Barbey N, Rick G, Chris Y. 
+
+
 Project title: Weapons of Mass Reduction.
 
 About:
@@ -14,12 +17,14 @@ Don't know where the closest gym to you is located? No worries. You can search f
 API's used:
 
 •	With the help of nutritionix API, we are able to pull the number of calories that are in the dish the user search for. 
+
 •	We used Google Map’s API to search for gyms close to the user’s location. 
 
 
 Design:
 
 •	We used a Bootstrap template to design the app.
+
 •	We used Yazio's "Calories Burned Calculator". 
 
 ## Copyright and License
