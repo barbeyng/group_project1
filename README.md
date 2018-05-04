@@ -5,6 +5,8 @@ Group Members: Amal H, Barbey N, Rick G, Chris Y.
 
 Project title: Weapons of Mass Reduction.
 
+Check it out here: https://barbeyng.github.io/group_project1/
+
 About:
 
 Weapons of Mass Reduction is a web application that helps people live a healthier lifestyle. 
